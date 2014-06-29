@@ -23,8 +23,7 @@ public class Main {
     private static Connection getConnection() throws URISyntaxException, SQLException {
     	
     	String url = "postgres://webmxepepayoov:IVWp0871dGYbbMyqrOVUv0eNeb@ec2-54-197-250-40.compute-1.amazonaws.com:5432/d22j8uu3jhe3qq";
-        URI dbUri = new URI(url);
-
+        URI dbUri = new URI(System.getenv("DATABASE_URL"));
 //        System.get
         
         String username = dbUri.getUserInfo().split(":")[0];
